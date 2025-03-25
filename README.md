@@ -32,6 +32,12 @@ _Fuente: Kaggle.com_
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/tutorial_kaggle.ipynb)
 
+### Árboles de decisión
+
+**Los árboles de decisión** son modelos de _machine learning_ que dividen datos en nodos mediante reglas **if-else**, basadas en características. Cada nodo representa una pregunta, cada rama una decisión y cada hoja un resultado. Son intuitivos, pero pueden sufrir _overfitting_. Se usan en clasificación y regresión. 🌳📊
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/decision_tree.ipynb)
+
 ### Hopfield
 
 **La red de Hopfield** es un modelo de red neuronal recurrente que almacena patrones como estados estables, actuando como memoria asociativa. Usa aprendizaje hebbiano para recuperar información incluso con entradas parciales o ruidosas. Aplicada en optimización y reconocimiento de patrones, aunque tiene limitaciones en capacidad de almacenamiento.
