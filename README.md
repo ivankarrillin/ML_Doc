@@ -57,4 +57,26 @@ _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
 
 [Ver ejercicio](https://ivankarrillin.github.io/ML_Doc/Hand_Detection_LandMark_IvanCarrillo.html)
 
+**Función para encontrar el coseno de dos vectores**
+
+```javascript
+function calcularCosenoEntreVectores(landmarks, idx1, idx2, idx3, idx4) {
+  const x1 = landmarks[idx2].x - landmarks[idx1].x;
+  const y1 = landmarks[idx2].y - landmarks[idx1].y;
+  const x2 = landmarks[idx4].x - landmarks[idx3].x;
+  const y2 = landmarks[idx4].y - landmarks[idx3].y;
+
+  const producto_punto = x1 * x2 + y1 * y2;
+  const norm1 = Math.sqrt(x1 * x1 + y1 * y1);
+  const norm2 = Math.sqrt(x2 * x2 + y2 * y2);
+  // división por cero (si algún vector es nulo)
+  if (norm1 === 0 || norm2 === 0) {
+    return 0;
+  }
+
+  const coseno = producto_punto / (norm1 * norm2);
+  return coseno;
+}
+```
+
 ![alt text](image.png)
