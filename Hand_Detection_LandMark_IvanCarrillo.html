@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Detection</title>
+
+    <!-- Import MediaPipe and Drawing Utilities -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Minimal CSS to center video and canvas -->
+    <style>
+      body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      video,
+      canvas {
+        position: absolute;
+        transform: rotateY(180deg);
+      } /* Mirror video and canvas */
+      p {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video and Canvas Elements for Real-Time Detection -->
+    <video id="webcam" autoplay playsinline></video>
+    <canvas id="output_canvas"></canvas>
+
+    <p id="apuntando"></p>
+
+    <!-- Main JavaScript for Hand Landmark Detection -->
+    <script type="module">
+      import {
+        HandLandmarker,
+        FilesetResolver,
+      } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0";
+
+      let handLandmarker; // Hand landmark detection instance
+      let runningMode = "VIDEO"; // Set running mode to video for real-time detection
+      let lastVideoTime = -1; // Track video frame timing
+
+      // Initialize hand landmark detector
+      const initializeHandLandmarker = async () => {
+        const vision = await FilesetResolver.forVisionTasks(
+          "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0/wasm"
+        );
+        handLandmarker = await HandLandmarker.createFromOptions(vision, {
+          baseOptions: {
+            modelAssetPath:
+              "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+            delegate: "GPU",
+          },
+          runningMode: runningMode,
+          numHands: 2,
+        });
+      };
+      initializeHandLandmarker(); // Initialize landmarker
+
+      const video = document.getElementById("webcam"); // Webcam video element
+      const canvas = document.getElementById("output_canvas"); // Canvas for drawing landmarks
+      const canvasCtx = canvas.getContext("2d");
+
+      // Enable webcam and set up real-time detection
+      if (navigator.mediaDevices?.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+          video.srcObject = stream;
+          video.addEventListener("loadeddata", predictWebcam);
+        });
+      }
+
+      //función del coseno del angulo
+
+      function calcularCosenoEntreVectores(landmarks, idx1, idx2, idx3, idx4) {
+        const x1 = landmarks[idx2].x - landmarks[idx1].x;
+        const y1 = landmarks[idx2].y - landmarks[idx1].y;
+        const x2 = landmarks[idx4].x - landmarks[idx3].x;
+        const y2 = landmarks[idx4].y - landmarks[idx3].y;
+
+        const producto_punto = x1 * x2 + y1 * y2;
+        const norm1 = Math.sqrt(x1 * x1 + y1 * y1);
+        const norm2 = Math.sqrt(x2 * x2 + y2 * y2);
+        // división por cero (si algún vector es nulo)
+        if (norm1 === 0 || norm2 === 0) {
+          return 0;
+        }
+
+        const coseno = producto_punto / (norm1 * norm2);
+        return coseno;
+      }
+
+      // Predict landmarks on each video frame
+      async function predictWebcam() {
+        // Ensure canvas matches video dimensions
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        if (handLandmarker && video.currentTime !== lastVideoTime) {
+          lastVideoTime = video.currentTime;
+
+          // Detect hand landmarks in the current video frame
+          const results = await handLandmarker.detectForVideo(
+            video,
+            performance.now()
+          );
+
+          // Clear the canvas before each frame
+          canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // If landmarks are detected, iterate through them
+          if (results.landmarks) {
+            for (const landmarks of results.landmarks) {
+              let i1 = landmarks[7].x - landmarks[6].x;
+              let i2 = landmarks[7].y - landmarks[6].y;
+
+              let m1 = landmarks[11].x - landmarks[10].x;
+              let m2 = landmarks[11].y - landmarks[10].y;
+
+              let a1 = landmarks[15].x - landmarks[14].x;
+              let a2 = landmarks[15].y - landmarks[14].y;
+
+              let q1 = landmarks[19].x - landmarks[18].x;
+              let q2 = landmarks[19].y - landmarks[18].y;
+
+              if (
+                calcularCosenoEntreVectores(landmarks, 6, 7, 10, 11) < -0.5 &&
+                calcularCosenoEntreVectores(landmarks, 6, 7, 14, 15) < -0.5 &&
+                calcularCosenoEntreVectores(landmarks, 6, 7, 18, 19) < -0.5
+              ) {
+                const parrafo = document.getElementById("apuntando");
+                parrafo.textContent = "Apuntando con indice 👆";
+
+                drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {
+                  color: "#00FF00",
+                  lineWidth: 5,
+                });
+                drawLandmarks(canvasCtx, landmarks, {
+                  color: "#FF0000",
+                  lineWidth: 2,
+                });
+
+                // Loop through each landmark and print its coordinates on the canvas
+                landmarks.forEach((landmark, index) => {
+                  const { x, y, z } = landmark;
+
+                  // Convert normalized coordinates (0 to 1) to canvas coordinates
+                  const canvasX = x * canvas.width;
+                  const canvasY = y * canvas.height;
+                });
+              } else {
+                const parrafo = document.getElementById("apuntando");
+                parrafo.textContent = "Sin apuntar";
+              }
+            }
+          }
+        }
+
+        // Call this function again for the next frame
+        requestAnimationFrame(predictWebcam);
+      }
+    </script>
+  </body>
+</html>
