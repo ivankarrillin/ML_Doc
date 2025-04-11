@@ -52,3 +52,9 @@ _Fuente: Hopfield, J. J. (1982). "Neural networks and physical systems with emer
 _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/PCA.ipynb)
+
+### Ejercicio de detección dedo índice
+
+[Ver ejercicio](https://ivankarrillin.github.io/ML_Doc/Hand_Detection_LandMark_IvanCarrillo.html)
+
+![alt text](image.png)
