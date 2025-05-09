@@ -24,6 +24,14 @@ _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Pyth
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/tutorial_pandas.ipynb)
 
+### Tutorial de Numpy
+
+> :warning: Tarea que faltaba
+
+**NumPy** es una biblioteca fundamental para computación científica en Python que proporciona soporte para arrays y matrices multidimensionales, junto con una amplia colección de funciones matemáticas de alto nivel para operar con estas estructuras de datos. Es el paquete básico para computación numérica en Python, permitiendo operaciones vectorizadas y matriciales eficientes, lo que lo hace esencial para aplicaciones de análisis de datos, machine learning, procesamiento de señales y álgebra lineal. NumPy destaca por su rendimiento optimizado (está escrito en C y Fortran) y su sintaxis concisa, siendo la base sobre la que se construyen muchas otras bibliotecas científicas del ecosistema Python como Pandas, SciPy y scikit-learn. Fuente: https://numpy.org/doc/stable/user/absolute_beginners.html
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/numpy/numpy.ipynb)
+
 ### Tutorial Kaggle
 
 **Kaggle** es una plataforma en línea para competencias de ciencia de datos y aprendizaje automático, donde usuarios comparten datasets, colaboran en proyectos y desarrollan modelos. Ofrece recursos educativos, kernels (notebooks) y acceso a herramientas cloud. Ideal para practicar, aprender y destacar en la comunidad de IA.
