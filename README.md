@@ -10,11 +10,12 @@ Cada una de las tareas conduce a su repositorio en Google Colab
 2. [Numpy](#numpy)
 3. [Sufijos (tarea Extra)](#sufijos)
 4. [Pandas](#pandas)
-5. [Reglas de asociacion](#asociacion)
-6. [Kaggle](#kaggle)
-7. [Hopfield](#hopfield)
-8. [Análisis PCA](#pca)
-9. [Árboles de Decisión](#arboles)
+5. [Maplotlib y hvPlot](#maplotlib)
+6. [Reglas de asociacion](#asociacion)
+7. [Kaggle](#kaggle)
+8. [Hopfield](#hopfield)
+9. [Análisis PCA](#pca)
+10. [Árboles de Decisión](#arboles)
 
 ---
 
@@ -51,6 +52,16 @@ _Fuente: Real Academia Española (RAE). "Diccionario de la lengua española" (Ed
 _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Python". Proceedings of SciPy._
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/4_pandas/tutorial_pandas.ipynb)
+
+---
+
+### 5. Maplotlib y hvPlot <a name="maplotlib"></a>
+
+> :warning: Tarea que faltaba
+
+Las librerías **Matplotlib** y **hvPlot** en Python son herramientas poderosas para la visualización de datos. **Matplotlib** es una de las bibliotecas más utilizadas para crear gráficos estáticos en 2D (como líneas, barras, histogramas o dispersión), ofreciendo un control detallado sobre cada aspecto del gráfico, lo que la hace ideal para personalizaciones avanzadas. Por otro lado, **hvPlot** es una interfaz de alto nivel construida sobre bibliotecas como HoloViews y Bokeh, que permite generar gráficos interactivos de forma sencilla a partir de estructuras de datos comunes como pandas DataFrames. Una de las principales ventajas de hvPlot es su capacidad de generar visualizaciones interactivas con muy poco código, ideal para exploración de datos y dashboards, mientras que Matplotlib destaca en su madurez y amplio soporte en el ecosistema científico de Python.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/5_maplotlib/librerias_graficas.ipynb)
 
 ---
 
