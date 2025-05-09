@@ -2,19 +2,40 @@
 
 **Machine Learning (ML)** es una rama de la inteligencia artificial que permite a las computadoras aprender de datos sin ser programadas explícitamente. Mediante algoritmos, los sistemas identifican patrones, hacen predicciones o toman decisiones basadas en información previa, mejorando su precisión con la experiencia. Se usa en aplicaciones como recomendaciones, reconocimiento de voz, diagnóstico médico y autos autónomos. En esencia, el ML transforma permite generar conocimiento a paritr del entendimiento de los datos.
 
-### Link al repositorio de código en Google Colab para cada tarea:
+## Tareas.
 
-### Ejercicio de Rimas
+Cada una de las tareas conduce a su repositorio en Google Colab
+
+1. [Ejercicio de Rimas](#rimas)
+2. [Numpy](#numpy)
+
+---
+
+### 1. Ejercicio de Rimas <a name="rimas"></a>
 
 **Las rimas en español** son la repetición de sonidos al final de dos o más versos, a partir de la última vocal acentuada. Pueden ser _consonantes_ (iguales sonidos en vocales y consonantes) o _asonantes_ (solo coinciden las vocales). Son clave en poesía, música y juegos infantiles.
 
 _Fuente: Real Academia Española (RAE). "Diccionario de la lengua española" (Ed. 23.ª, 2014)._
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/ejercicio_rimas.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/1_rimas/ejercicio_rimas.ipynb)
+
+---
+
+### 2. Tutorial de Numpy <a name="numpy"></a>
+
+> :warning: Tarea que faltaba
+
+**NumPy** es una biblioteca fundamental para computación científica en Python que proporciona soporte para arrays y matrices multidimensionales, junto con una amplia colección de funciones matemáticas de alto nivel para operar con estas estructuras de datos. Es el paquete básico para computación numérica en Python, permitiendo operaciones vectorizadas y matriciales eficientes, lo que lo hace esencial para aplicaciones de análisis de datos, machine learning, procesamiento de señales y álgebra lineal. NumPy destaca por su rendimiento optimizado (está escrito en C y Fortran) y su sintaxis concisa, siendo la base sobre la que se construyen muchas otras bibliotecas científicas del ecosistema Python como Pandas, SciPy y scikit-learn. Fuente: https://numpy.org/doc/stable/user/absolute_beginners.html
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/2_numpy/numpy.ipynb)
+
+---
 
 ### Ejercicio de sufijos (tarea Extra)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/ejercicio_sufijos.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/3_sufijos/ejercicio_sufijos.ipynb)
+
+---
 
 ### Tutorial Pandas
 
@@ -22,15 +43,19 @@ _Fuente: Real Academia Española (RAE). "Diccionario de la lengua española" (Ed
 
 _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Python". Proceedings of SciPy._
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/tutorial_pandas.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/4_pandas/tutorial_pandas.ipynb)
 
-### Tutorial de Numpy
+---
 
-> :warning: Tarea que faltaba
+### Reglas de asociación
 
-**NumPy** es una biblioteca fundamental para computación científica en Python que proporciona soporte para arrays y matrices multidimensionales, junto con una amplia colección de funciones matemáticas de alto nivel para operar con estas estructuras de datos. Es el paquete básico para computación numérica en Python, permitiendo operaciones vectorizadas y matriciales eficientes, lo que lo hace esencial para aplicaciones de análisis de datos, machine learning, procesamiento de señales y álgebra lineal. NumPy destaca por su rendimiento optimizado (está escrito en C y Fortran) y su sintaxis concisa, siendo la base sobre la que se construyen muchas otras bibliotecas científicas del ecosistema Python como Pandas, SciPy y scikit-learn. Fuente: https://numpy.org/doc/stable/user/absolute_beginners.html
+> :point_up: Se mejora esta tarea
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/numpy/numpy.ipynb)
+Los **algoritmos de reglas de asociación** son técnicas utilizadas en minería de datos para descubrir relaciones interesantes entre variables dentro de grandes conjuntos de datos. Su objetivo principal es identificar patrones del tipo "si ocurre A, entonces probablemente ocurra B", conocidos como reglas de la forma **A ⇒ B**, donde A y B son conjuntos de ítems. Estos algoritmos, como Apriori o FP-Growth, calculan métricas como el **soporte**, la **confianza** y el **lift** para evaluar la importancia y la fiabilidad de estas reglas. Son ampliamente utilizados en aplicaciones como análisis de cesta de mercado, recomendaciones de productos, detección de fraudes y análisis de comportamiento del cliente.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/5_reglas_asociacion/reglas_asociacion.ipynb)
+
+---
 
 ### Tutorial Kaggle
 
@@ -38,13 +63,9 @@ _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Pyth
 
 _Fuente: Kaggle.com_
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/tutorial_kaggle.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/6_kaggle/tutorial_kaggle.ipynb)
 
-### Árboles de decisión
-
-**Los árboles de decisión** son modelos de _machine learning_ que dividen datos en nodos mediante reglas **if-else**, basadas en características. Cada nodo representa una pregunta, cada rama una decisión y cada hoja un resultado. Son intuitivos, pero pueden sufrir _overfitting_. Se usan en clasificación y regresión. 🌳📊
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/decision_tree.ipynb)
+---
 
 ### Hopfield
 
@@ -52,18 +73,30 @@ _Fuente: Kaggle.com_
 
 _Fuente: Hopfield, J. J. (1982). "Neural networks and physical systems with emergent collective computational abilities". PNAS._
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/Hopfield.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/7_hopfield/Hopfield.ipynb)
+
+---
 
 ### PCA
 
 **PCA (Análisis de Componentes Principales)** es una técnica de reducción de dimensionalidad que transforma datos complejos en componentes ortogonales, ordenados por varianza explicada. Identifica patrones clave, eliminando redundancias y ruido, facilitando visualización y análisis. Usado en imágenes, genómica y finanzas, simplifica modelos sin perder información esencial. ¡Eficaz para datos correlacionados!
 _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/PCA.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/8_analisis_pca/PCA.ipynb)
+
+---
+
+### Árboles de decisión
+
+**Los árboles de decisión** son modelos de _machine learning_ que dividen datos en nodos mediante reglas **if-else**, basadas en características. Cada nodo representa una pregunta, cada rama una decisión y cada hoja un resultado. Son intuitivos, pero pueden sufrir _overfitting_. Se usan en clasificación y regresión. 🌳📊
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/9_arboles_decision/decision_tree.ipynb)
+
+---
 
 ### Ejercicio de detección dedo índice
 
-[Ver ejercicio](https://ivankarrillin.github.io/ML_Doc/Hand_Detection_LandMark_IvanCarrillo.html)
+[Ver ejercicio](https://ivankarrillin.github.io/ML_Doc/vision_computer/Hand_Detection_LandMark_IvanCarrillo.html)
 
 **Función para encontrar el coseno de dos vectores**
 
