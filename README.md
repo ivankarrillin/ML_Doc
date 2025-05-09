@@ -8,6 +8,13 @@ Cada una de las tareas conduce a su repositorio en Google Colab
 
 1. [Ejercicio de Rimas](#rimas)
 2. [Numpy](#numpy)
+3. [Sufijos (tarea Extra)](#sufijos)
+4. [Pandas](#pandas)
+5. [Reglas de asociacion](#asociacion)
+6. [Kaggle](#kaggle)
+7. [Hopfield](#hopfield)
+8. [Análisis PCA](#pca)
+9. [Árboles de Decisión](#arboles)
 
 ---
 
@@ -31,13 +38,13 @@ _Fuente: Real Academia Española (RAE). "Diccionario de la lengua española" (Ed
 
 ---
 
-### Ejercicio de sufijos (tarea Extra)
+### 3. Ejercicio de sufijos (tarea Extra) <a name="sufijos"></a>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/3_sufijos/ejercicio_sufijos.ipynb)
 
 ---
 
-### Tutorial Pandas
+### 4. Tutorial Pandas <a name="pandas"></a>
 
 **Pandas** es una biblioteca de Python para análisis y manipulación de datos. Ofrece estructuras eficientes como _DataFrames_ y _Series_, permitiendo limpieza, filtrado, agregación y visualización de datos. Esencial en ciencia de datos, integrable con NumPy y Scikit-learn.
 
@@ -47,7 +54,7 @@ _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Pyth
 
 ---
 
-### Reglas de asociación
+### 5. Reglas de asociación <a name="asociacion"></a>
 
 > :point_up: Se mejora esta tarea
 
@@ -57,7 +64,7 @@ Los **algoritmos de reglas de asociación** son técnicas utilizadas en minería
 
 ---
 
-### Tutorial Kaggle
+### 6. Tutorial Kaggle <a name="kaggle"></a>
 
 **Kaggle** es una plataforma en línea para competencias de ciencia de datos y aprendizaje automático, donde usuarios comparten datasets, colaboran en proyectos y desarrollan modelos. Ofrece recursos educativos, kernels (notebooks) y acceso a herramientas cloud. Ideal para practicar, aprender y destacar en la comunidad de IA.
 
@@ -67,7 +74,7 @@ _Fuente: Kaggle.com_
 
 ---
 
-### Hopfield
+### 7. Hopfield <a name="hopfield"></a>
 
 **La red de Hopfield** es un modelo de red neuronal recurrente que almacena patrones como estados estables, actuando como memoria asociativa. Usa aprendizaje hebbiano para recuperar información incluso con entradas parciales o ruidosas. Aplicada en optimización y reconocimiento de patrones, aunque tiene limitaciones en capacidad de almacenamiento.
 
@@ -77,7 +84,7 @@ _Fuente: Hopfield, J. J. (1982). "Neural networks and physical systems with emer
 
 ---
 
-### PCA
+### 8. PCA <a name="pca"></a>
 
 **PCA (Análisis de Componentes Principales)** es una técnica de reducción de dimensionalidad que transforma datos complejos en componentes ortogonales, ordenados por varianza explicada. Identifica patrones clave, eliminando redundancias y ruido, facilitando visualización y análisis. Usado en imágenes, genómica y finanzas, simplifica modelos sin perder información esencial. ¡Eficaz para datos correlacionados!
 _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
@@ -86,7 +93,7 @@ _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
 
 ---
 
-### Árboles de decisión
+### 9. Árboles de decisión <a name="arboles"></a>
 
 **Los árboles de decisión** son modelos de _machine learning_ que dividen datos en nodos mediante reglas **if-else**, basadas en características. Cada nodo representa una pregunta, cada rama una decisión y cada hoja un resultado. Son intuitivos, pero pueden sufrir _overfitting_. Se usan en clasificación y regresión. 🌳📊
 
