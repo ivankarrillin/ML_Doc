@@ -47,6 +47,8 @@ _Fuente: Real Academia Española (RAE). "Diccionario de la lengua española" (Ed
 
 ### 4. Tutorial Pandas <a name="pandas"></a>
 
+> :point_up: Se mejora esta tarea
+
 **Pandas** es una biblioteca de Python para análisis y manipulación de datos. Ofrece estructuras eficientes como _DataFrames_ y _Series_, permitiendo limpieza, filtrado, agregación y visualización de datos. Esencial en ciencia de datos, integrable con NumPy y Scikit-learn.
 
 _Fuente: McKinney, W. (2010). "Data Structures for Statistical Computing in Python". Proceedings of SciPy._
