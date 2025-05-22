@@ -16,6 +16,7 @@ Cada una de las tareas conduce a su repositorio en Google Colab
 8. [Hopfield](#hopfield)
 9. [Análisis PCA](#pca)
 10. [Árboles de Decisión](#arboles)
+11. [KNN](#knn)
 
 ---
 
@@ -111,6 +112,16 @@ _Fuente: Jolliffe, I. T. (2002). "Principal Component Analysis". Springer._
 **Los árboles de decisión** son modelos de _machine learning_ que dividen datos en nodos mediante reglas **if-else**, basadas en características. Cada nodo representa una pregunta, cada rama una decisión y cada hoja un resultado. Son intuitivos, pero pueden sufrir _overfitting_. Se usan en clasificación y regresión. 🌳📊
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/9_arboles_decision/decision_tree.ipynb)
+
+---
+
+---
+
+### 11. KNN <a name="knn"></a>
+
+El **análisis KNN (K-Nearest Neighbors o K-Vecinos más Cercanos)** es un algoritmo de aprendizaje supervisado utilizado tanto para clasificación como para regresión, que predice basándose en la similitud con los _k_ ejemplos más cercanos en el espacio de características. Su principio fundamental es que observaciones similares tienden a tener resultados similares ("Los vecinos más cercanos constituyen una buena estimación local" — Fix & Hodges, 1951). Este método no asume una distribución subyacente de los datos, lo que lo hace versátil, pero su rendimiento depende críticamente de la métrica de distancia (ej. euclidiana), la selección de _k_ y el escalado de variables. Es especialmente útil en problemas donde las relaciones no son lineales, aunque puede volverse computacionalmente costoso con grandes volúmenes de datos (Tan et al., Introduction to Data Mining, 2016).
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/10_KNN_ejercicio/ejercicio.ipynb)
 
 ---
 
