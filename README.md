@@ -17,6 +17,8 @@ Cada una de las tareas conduce a su repositorio en Google Colab
 9. [Análisis PCA](#pca)
 10. [Árboles de Decisión](#arboles)
 11. [KNN](#knn)
+12. [Vision por computadora](#hand)
+13. [Micropython](#micro)
 
 ---
 
@@ -125,7 +127,7 @@ El **análisis KNN (K-Nearest Neighbors o K-Vecinos más Cercanos)** es un algor
 
 ---
 
-### Ejercicio de detección dedo índice
+### 12. Ejercicio de detección dedo índice <a name="hand"></a>
 
 [Ver ejercicio](https://ivankarrillin.github.io/ML_Doc/vision_computer/Hand_Detection_LandMark_IvanCarrillo.html)
 
@@ -153,7 +155,7 @@ function calcularCosenoEntreVectores(landmarks, idx1, idx2, idx3, idx4) {
 
 ![alt text](image.png)
 
-### Ejercicio de Micropython
+### 13. Ejercicio de Micropython <a name="micro"></a>
 
 La correspondencia de características es fundamental en muchos problemas de visión artificial, como el reconocimiento de objetos o la estructura a partir del movimiento. Los métodos actuales se basan en descriptores costosos para la detección y la correspondencia. En este artículo, proponemos un descriptor binario muy rápido basado en BRIEF, llamado ORB, que es invariante a la rotación y resistente al ruido. Demostramos mediante experimentos que ORB es dos órdenes de magnitud más rápido que SIFT, con un rendimiento similar en muchas situaciones. Su eficiencia se prueba en diversas aplicaciones del mundo real, incluyendo la detección de objetos y el seguimiento de parches en un teléfono inteligente.
 
