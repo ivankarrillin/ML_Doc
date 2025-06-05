@@ -180,7 +180,7 @@ El algoritmo detecta los Keypoints de una imagen que puede ser usado para proyec
 
 **Salida:**
 
-![alt text](keypoints.png)
+![alt text](keypoints-out.png)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/Mycropython/Algoritmo-ORB.ipynb)
 
