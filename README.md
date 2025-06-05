@@ -153,7 +153,7 @@ function calcularCosenoEntreVectores(landmarks, idx1, idx2, idx3, idx4) {
 }
 ```
 
-![alt text](image.png)
+<img src="image.png" alt="alt text" width="300"/>
 
 ### 13. Ejercicio de Micropython <a name="micro"></a>
 
@@ -189,5 +189,3 @@ El algoritmo detecta los Keypoints de una imagen que puede ser usado para proyec
 [Ir a Wokwi (simulador MicroPython)](https://wokwi.com/projects/432405849571279873)
 
 ![alt text](wowki-test.png)
-
-![alt text](image.png)
