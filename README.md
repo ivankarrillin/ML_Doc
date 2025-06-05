@@ -152,3 +152,40 @@ function calcularCosenoEntreVectores(landmarks, idx1, idx2, idx3, idx4) {
 ```
 
 ![alt text](image.png)
+
+### Ejercicio de Micropython
+
+La correspondencia de características es fundamental en muchos problemas de visión artificial, como el reconocimiento de objetos o la estructura a partir del movimiento. Los métodos actuales se basan en descriptores costosos para la detección y la correspondencia. En este artículo, proponemos un descriptor binario muy rápido basado en BRIEF, llamado ORB, que es invariante a la rotación y resistente al ruido. Demostramos mediante experimentos que ORB es dos órdenes de magnitud más rápido que SIFT, con un rendimiento similar en muchas situaciones. Su eficiencia se prueba en diversas aplicaciones del mundo real, incluyendo la detección de objetos y el seguimiento de parches en un teléfono inteligente.
+
+**Ejemplo de uso:**
+
+```python
+
+#Se importa la clase creada en Micropython
+from orb_detector import ORBDetector
+
+orb = ORBDetector()
+
+#el algoritmo tiene un método que recibe como párametro de entrada una imagen almacenada como array en un archivo .txt
+key = orb.detectar_orb("insumos/imagen.txt")
+key1 = orb.detectar_orb("insumos/imagen1.txt")
+
+print("Total keypoints:", len(key))
+print("Primeros 5 keypoints:", key[:5])
+```
+
+El algoritmo detecta los Keypoints de una imagen que puede ser usado para proyectos de automatización como el seguimiento de un objeto o encontrar un patrón que ya se le ha dado:
+
+**Salida:**
+
+![alt text](keypoints.png)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ivankarrillin/ML_Doc/blob/main/Mycropython/Algoritmo-ORB.ipynb)
+
+#### Testeo del algoritmo en un espacio de simulación:
+
+[Ir a Wokwi (simulador MicroPython)](https://wokwi.com/projects/432405849571279873)
+
+![alt text](wowki-test.png)
+
+![alt text](image.png)
